@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class FlechaControl : MonoBehaviour {
+	public int attackDamage = 10;
 	public int rebotes = 1;
+	GameObject player;
+	PlayerHealth playerHealth;
 	// Use this for initialization
 
 	Rigidbody flechaRB;
@@ -11,6 +14,8 @@ public class FlechaControl : MonoBehaviour {
 	void Awake(){
 		//anim = GetComponent<Animator>();
 		flechaRB = GetComponent<Rigidbody>();
+		player = GameObject.FindGameObjectWithTag ("Player");
+		playerHealth = player.GetComponent <PlayerHealth> ();
 	}
 
 	void Start () {
@@ -24,9 +29,9 @@ public class FlechaControl : MonoBehaviour {
 	void OnCollisionEnter(Collision col)
 	{
 		Debug.Log(col.gameObject.tag);
-    // if (col.gameObject.tag == "Player"){
-		//
-    // }
+    if (col.gameObject.tag == "Player"){
+			playerHealth.TakeDamage (attackDamage);
+    }
 		if (col.gameObject.tag == "Terreno") {
 			if (!(rebotes>0)) {
 				transform.SetParent(col.gameObject.transform, true);
