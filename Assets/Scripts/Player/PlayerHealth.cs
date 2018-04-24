@@ -22,6 +22,9 @@ public class PlayerHealth : MonoBehaviour
     bool isDead;
     bool damaged;
 
+    //animator
+    public Animator anima;
+
 
     void Awake ()
     {
@@ -30,6 +33,7 @@ public class PlayerHealth : MonoBehaviour
         playerMovement = GetComponent <PlayerMovement> ();
         //playerShooting = GetComponentInChildren <PlayerShooting> ();
         currentHealth = startingHealth;
+        anima = GetComponent<Animator>();
     }
 
 
@@ -44,6 +48,7 @@ public class PlayerHealth : MonoBehaviour
             damageImage.color = Color.Lerp (damageImage.color, Color.clear, flashSpeed * Time.deltaTime);
         }
         damaged = false;
+
     }
 
 
@@ -77,6 +82,11 @@ public class PlayerHealth : MonoBehaviour
 
         playerMovement.enabled = false;
         //playerShooting.enabled = false;
+
+        //death animation
+
+        anima.SetTrigger("Death");
+
     }
 
 
