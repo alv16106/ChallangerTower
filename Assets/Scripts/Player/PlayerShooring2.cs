@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class PlayerShooting2 : MonoBehaviour
+public class PlayerShooring2 : MonoBehaviour
 {
     public int damagePerShot = 20;
     public float timeBetweenBullets = 0.15f;

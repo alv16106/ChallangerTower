@@ -20,6 +20,9 @@ public class PlayerMovement2 : MonoBehaviour
     public GameObject Arco;
     public GameObject Espada;
     public GameObject Escudo;
+    public GameObject pelvis;
+    public GameObject right;
+    public GameObject left;
     public Camera camara;
     public bool isArco;
     public bool tieneEscudo;
@@ -103,16 +106,35 @@ public class PlayerMovement2 : MonoBehaviour
         }
         else if (Input.GetButton("Fire1C") && !isArco)
         {
-            //anima.SetTrigger("Mouse");
+            anima.SetTrigger("Mouse");
         }
         else if (Input.GetButton("ShieldC") && !isArco && timer2 >= escudoCD)
         {
             anima.SetTrigger("Block");
             ph.invulnerable = true;
         }
-        else if (Input.GetMouseButtonDown(2))
+        else if (Input.GetButton("Change"))
         {
             isArco = !isArco;
+            if (!isArco)
+            {
+                Arco.transform.parent = pelvis.transform.parent;
+                Arco.transform.position = new Vector3(pelvis.transform.position.x-(float)0.1, pelvis.transform.position.y+1,pelvis.transform.position.z);
+                Espada.transform.parent = right.transform;
+                Espada.transform.position = new Vector3(right.transform.position.x, right.transform.position.y, right.transform.position.z);
+                Escudo.transform.parent = left.transform;
+                Escudo.transform.position = new Vector3(left.transform.position.x+(float)0.2, left.transform.position.y, left.transform.position.z);
+            }
+            if (isArco)
+            {
+                Arco.transform.parent = left.transform.parent;
+                Arco.transform.position = left.transform.position;
+                Espada.transform.parent = pelvis.transform;
+                Espada.transform.position = new Vector3(pelvis.transform.position.x-.3f, pelvis.transform.position.y, pelvis.transform.position.z-.3f);
+                Escudo.transform.parent = pelvis.transform;
+                Escudo.transform.position = new Vector3(pelvis.transform.position.x - .3f, pelvis.transform.position.y+.5f, pelvis.transform.position.z - .3f);
+            }
+            
         }
     }
 
