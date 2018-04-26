@@ -20,15 +20,21 @@ public class PlayerMovement : MonoBehaviour
   public GameObject Arco;
   public GameObject Espada;
   public GameObject Escudo;
+  public Camera camara;
+  public bool isArco;
+  public bool tieneEscudo;
 
   public float velocidad = 6.0f;
   public float timeBetweenBullets = 0.15f;
+  public float escudoCD = 0.5f;
   public GameObject bulletPrefab;
   public Transform bulletSpawn;
 
+  PlayerHealth ph;
   float timer;
+  float timer2;
   Vector3 movimiento;
-  //Animator anim;
+  Animator anima;
   Rigidbody jugadorRB;
   int Piso;
   float camRayLargo = 100f;
@@ -42,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
   }
 
   void Vuelta(){
-    Ray camRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+    Ray camRay = camara.ScreenPointToRay(Input.mousePosition);
     RaycastHit floorhit;
     if (Physics.Raycast(camRay, out floorhit, camRayLargo, Piso)) {
       Vector3 jugadorToMouse = floorhit.point - transform.position;
@@ -67,7 +73,9 @@ public class PlayerMovement : MonoBehaviour
 }
 
 void Awake(){
+  ph = GetComponent<PlayerHealth>();
   Piso = LayerMask.GetMask ("Floor");
+  anima = GetComponent<Animator>();
   //anim = GetComponent<Animator>();
   jugadorRB = GetComponent<Rigidbody>();
 }
@@ -81,11 +89,32 @@ void Awake(){
 
   void Update(){
     timer += Time.deltaTime;
-
-    if(Input.GetButton ("Fire1") && timer >= timeBetweenBullets && Time.timeScale != 0)
+    timer2 += Time.deltaTime;
+    if(Input.GetButton ("Fire1") && timer >= timeBetweenBullets && Time.timeScale != 0 && isArco)
     {
-        Fire ();
+      anima.SetTrigger("Bow");
+    }else if (Input.GetButton ("Fire1") && !isArco) {
+      //anima.SetTrigger("Mouse");
+    }else if (Input.GetButton ("Shield") && !isArco && timer2 >= escudoCD){
+      anima.SetTrigger("Block");
+      ph.invulnerable = true;
+    }else if (Input.GetMouseButtonDown(2)){
+      isArco = !isArco;
     }
+  }
+
+  //Placeholder functions for Animation events
+  public void Hit(){
+  }
+
+  public void Shoot(){
+    Fire();
+  }
+
+  public void FootR(){
+  }
+
+  public void FootL(){
   }
 
 }

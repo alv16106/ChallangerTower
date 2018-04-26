@@ -14,8 +14,6 @@ public class FlechaControl : MonoBehaviour {
 	void Awake(){
 		//anim = GetComponent<Animator>();
 		flechaRB = GetComponent<Rigidbody>();
-		player = GameObject.FindGameObjectWithTag ("Player");
-		playerHealth = player.GetComponent <PlayerHealth> ();
 	}
 
 	void Start () {
@@ -29,7 +27,9 @@ public class FlechaControl : MonoBehaviour {
 	void OnCollisionEnter(Collision col)
 	{
 		Debug.Log(col.gameObject.tag);
-    if (col.gameObject.tag == "Player"){
+    if (col.gameObject.tag == "Player" || col.gameObject.tag == "Player2"){
+			player = GameObject.FindGameObjectWithTag (col.gameObject.tag);
+			playerHealth = player.GetComponent <PlayerHealth> ();
 			playerHealth.TakeDamage (attackDamage);
     }
 		if (col.gameObject.tag == "Terreno") {

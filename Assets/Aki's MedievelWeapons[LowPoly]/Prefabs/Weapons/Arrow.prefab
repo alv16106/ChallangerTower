@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010480416858}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 0}
@@ -113,6 +113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89344d399f54847f9ac23f70f56ca053, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackDamage: 10
   rebotes: 1
 --- !u!136 &136018932061886498
 CapsuleCollider:
@@ -123,7 +124,7 @@ CapsuleCollider:
   m_Material: {fileID: 13400000, guid: 96688d5b1ae28422a855d4c48b5c2af5, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.003
-  m_Height: 0.02
+  m_Radius: 0.002
+  m_Height: 0.005
   m_Direction: 0
-  m_Center: {x: -0.003953831, y: 0, z: 0}
+  m_Center: {x: -0.011, y: 0, z: 0}

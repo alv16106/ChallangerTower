@@ -10,25 +10,25 @@ public class anim : MonoBehaviour {
 	void Start () {
         anima = GetComponent<Animator>();
 
-		
+
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
         float move = Input.GetAxis("Vertical");
         anima.SetFloat("Vel", move);
         if (Input.GetMouseButtonDown(0))
         {
-            anima.SetTrigger("Mouse");
+            //anima.SetTrigger("Mouse");
         }
 
         if (Input.GetMouseButtonDown(1))
         {
-            anima.SetTrigger("Block");
+            //anima.SetTrigger("Block");
         }
         if (Input.GetMouseButtonDown(2))
         {
-            anima.SetTrigger("Bow");
+            // anima.SetTrigger("Bow");
         }
 
     }

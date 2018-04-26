@@ -264,6 +264,120 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 30414318}
   m_Mesh: {fileID: 4300000, guid: 31c69e98b28c0a446a7982d4f1872d2e, type: 3}
+--- !u!1 &43683176 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100050, guid: e42d9259129992a4d95e0b320ca2a43d, type: 3}
+  m_PrefabInternal: {fileID: 933197816}
+--- !u!195 &43683177
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 43683176}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &43683178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 43683176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f10bb16bf04e31c46b8292ab0d87affe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &43683179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 43683176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 544f2064df03e95419b4a5147c506b08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 100
+  currentHealth: 0
+  healthSlider: {fileID: 1020430201}
+  damageImage: {fileID: 1380298806}
+  invulnerable: 0
+  flashSpeed: 5
+  flashColour: {r: 1, g: 0, b: 0, a: 0.1}
+  anima: {fileID: 43683183}
+--- !u!114 &43683180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 43683176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ec45203ae7a1a54c9d02c355f983833, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Arco: {fileID: 100050, guid: e9ebfd61d4a1b494faf4927176030477, type: 3}
+  Espada: {fileID: 100050, guid: 4d3ff1b31cb814e4aae6266213c9574c, type: 3}
+  Escudo: {fileID: 100050, guid: 7c31266611d776b468d8b445f18a91f9, type: 3}
+  camara: {fileID: 1529181581}
+  isArco: 0
+  tieneEscudo: 0
+  velocidad: 6
+  timeBetweenBullets: 0.15
+  escudoCD: 0.5
+  bulletPrefab: {fileID: 1000010480416858, guid: 07b4e1645f441dc47afc0a1dc1b29bb7,
+    type: 2}
+  bulletSpawn: {fileID: 1549314833}
+--- !u!65 &43683181
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 43683176}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.61, y: 2.82, z: 0.45}
+  m_Center: {x: 0, y: 1.41, z: 0}
+--- !u!54 &43683182
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 43683176}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 80
+  m_CollisionDetection: 0
+--- !u!95 &43683183 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 9500000, guid: e42d9259129992a4d95e0b320ca2a43d,
+    type: 3}
+  m_PrefabInternal: {fileID: 933197816}
+--- !u!4 &43683184 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400050, guid: e42d9259129992a4d95e0b320ca2a43d, type: 3}
+  m_PrefabInternal: {fileID: 933197816}
 --- !u!1 &52402011
 GameObject:
   m_ObjectHideFlags: 0
@@ -473,6 +587,22 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bab2ab8c0e20448c7b133cc037782621, type: 3}
   m_IsPrefabParent: 0
+--- !u!1 &100817271 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: b3aa3ed615bc440f5a852d3542769edc, type: 3}
+  m_PrefabInternal: {fileID: 288691658}
+--- !u!65 &100817274
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 100817271}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.13, y: 0.18, z: 0.01}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &116333525
 GameObject:
   m_ObjectHideFlags: 0
@@ -486,7 +616,7 @@ GameObject:
   - component: {fileID: 116333527}
   m_Layer: 0
   m_Name: castle_wall_15m (3)
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -648,6 +778,7 @@ RectTransform:
   m_Children:
   - {fileID: 1091340221}
   - {fileID: 1380298805}
+  - {fileID: 1009330079}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -670,7 +801,7 @@ GameObject:
   - component: {fileID: 139326089}
   m_Layer: 0
   m_Name: citadel_wall_a
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -759,7 +890,7 @@ GameObject:
   - component: {fileID: 144346088}
   m_Layer: 0
   m_Name: castle_wall_10m
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -910,7 +1041,7 @@ GameObject:
   - component: {fileID: 176864427}
   m_Layer: 0
   m_Name: fountain_b
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -987,7 +1118,7 @@ GameObject:
   - component: {fileID: 209967983}
   m_Layer: 0
   m_Name: wall_H10m_corner
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -1214,6 +1345,68 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 229514129}
   m_Mesh: {fileID: 4300000, guid: 0eb67215ab790604d973fd413a6c9403, type: 3}
+--- !u!1001 &252558440
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 957097592}
+    m_Modifications:
+    - target: {fileID: 400000, guid: b3aa3ed615bc440f5a852d3542769edc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b3aa3ed615bc440f5a852d3542769edc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b3aa3ed615bc440f5a852d3542769edc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b3aa3ed615bc440f5a852d3542769edc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.49712822
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b3aa3ed615bc440f5a852d3542769edc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.5028563
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b3aa3ed615bc440f5a852d3542769edc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.49712735
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b3aa3ed615bc440f5a852d3542769edc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.50285536
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b3aa3ed615bc440f5a852d3542769edc, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b3aa3ed615bc440f5a852d3542769edc, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b3aa3ed615bc440f5a852d3542769edc, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b3aa3ed615bc440f5a852d3542769edc, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b3aa3ed615bc440f5a852d3542769edc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b3aa3ed615bc440f5a852d3542769edc, type: 3}
+      propertyPath: m_TagString
+      value: Escudo
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: b3aa3ed615bc440f5a852d3542769edc, type: 3}
+  m_IsPrefabParent: 0
 --- !u!1001 &259199564
 Prefab:
   m_ObjectHideFlags: 0
@@ -1406,6 +1599,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b3aa3ed615bc440f5a852d3542769edc, type: 3}
+      propertyPath: m_TagString
+      value: Escudo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b3aa3ed615bc440f5a852d3542769edc, type: 3}
   m_IsPrefabParent: 0
@@ -1572,7 +1769,7 @@ GameObject:
   - component: {fileID: 325457148}
   m_Layer: 0
   m_Name: tent_c
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -1800,7 +1997,7 @@ GameObject:
   - component: {fileID: 334887356}
   m_Layer: 0
   m_Name: castle_wall_corner_a
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -2006,7 +2203,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &362989497
 GameObject:
@@ -2063,7 +2260,7 @@ GameObject:
   - component: {fileID: 371753225}
   m_Layer: 0
   m_Name: tent_c (3)
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -2140,7 +2337,7 @@ GameObject:
   - component: {fileID: 376218489}
   m_Layer: 0
   m_Name: citadel_main
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -2234,7 +2431,7 @@ GameObject:
   - component: {fileID: 391996609}
   m_Layer: 0
   m_Name: tent_c (4)
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -2372,6 +2569,35 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 393967685}
   m_Mesh: {fileID: 4300000, guid: d7834a2d3936cd64792a3bdb565e2b0d, type: 3}
+--- !u!1 &414756936 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: f8fae8a9e002e4c4fbbea75b09a21fbb, type: 3}
+  m_PrefabInternal: {fileID: 520630929}
+--- !u!136 &414756939
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 414756936}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.01
+  m_Height: 0.38
+  m_Direction: 1
+  m_Center: {x: 0, y: -0.08, z: 0}
+--- !u!114 &414756940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 414756936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1237f038b01c41be8ca269c12a847ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDamage: 15
 --- !u!1 &418455472
 GameObject:
   m_ObjectHideFlags: 0
@@ -2604,6 +2830,74 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 423700077}
   m_Mesh: {fileID: 4300000, guid: 58379ff237ae7ef4082fb2cc1cb3b1b6, type: 3}
+--- !u!1 &424872939
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 424872940}
+  - component: {fileID: 424872942}
+  - component: {fileID: 424872941}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &424872940
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 424872939}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1009330079}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 30, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &424872941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 424872939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: ac394e6e5080d754e8b437e5936fca3b, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &424872942
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 424872939}
 --- !u!1 &428050432
 GameObject:
   m_ObjectHideFlags: 0
@@ -2615,7 +2909,7 @@ GameObject:
   - component: {fileID: 428050433}
   m_Layer: 0
   m_Name: city_border
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2693,7 +2987,7 @@ GameObject:
   - component: {fileID: 459408671}
   m_Layer: 0
   m_Name: tent_a (1)
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -2771,7 +3065,7 @@ GameObject:
   - component: {fileID: 465943248}
   m_Layer: 0
   m_Name: tent_c (15)
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -2932,6 +3226,72 @@ CapsuleCollider:
   m_Height: 3.8
   m_Direction: 2
   m_Center: {x: 0.00000010651476, y: 0.00000008113544, z: 1.4247204}
+--- !u!1001 &520630929
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 957097592}
+    m_Modifications:
+    - target: {fileID: 400000, guid: f8fae8a9e002e4c4fbbea75b09a21fbb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.27996373
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: f8fae8a9e002e4c4fbbea75b09a21fbb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.22596234
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: f8fae8a9e002e4c4fbbea75b09a21fbb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.010001618
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: f8fae8a9e002e4c4fbbea75b09a21fbb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5028554
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: f8fae8a9e002e4c4fbbea75b09a21fbb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.49712735
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: f8fae8a9e002e4c4fbbea75b09a21fbb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.50285625
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: f8fae8a9e002e4c4fbbea75b09a21fbb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.49712822
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: f8fae8a9e002e4c4fbbea75b09a21fbb, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: f8fae8a9e002e4c4fbbea75b09a21fbb, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: f8fae8a9e002e4c4fbbea75b09a21fbb, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: f8fae8a9e002e4c4fbbea75b09a21fbb, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: f8fae8a9e002e4c4fbbea75b09a21fbb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: f8fae8a9e002e4c4fbbea75b09a21fbb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 180
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: f8fae8a9e002e4c4fbbea75b09a21fbb, type: 3}
+  m_IsPrefabParent: 0
+--- !u!4 &539998083 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400044, guid: e42d9259129992a4d95e0b320ca2a43d, type: 3}
+  m_PrefabInternal: {fileID: 933197816}
 --- !u!1 &572544647
 GameObject:
   m_ObjectHideFlags: 0
@@ -2945,7 +3305,7 @@ GameObject:
   - component: {fileID: 572544649}
   m_Layer: 0
   m_Name: citadel_wall_b (1)
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -3021,7 +3381,7 @@ GameObject:
   - component: {fileID: 576186134}
   m_Layer: 0
   m_Name: tent_a (2)
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -3179,7 +3539,7 @@ AudioListener:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 617876442}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!124 &617876444
 Behaviour:
   m_ObjectHideFlags: 0
@@ -3199,13 +3559,13 @@ Camera:
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
+    x: 0.5
     y: 0
-    width: 1
+    width: 0.5
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 100
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -3230,11 +3590,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 617876442}
   m_LocalRotation: {x: 0.17583925, y: -0.560999, z: 0.14192836, w: 0.7963774}
-  m_LocalPosition: {x: 72.96, y: 12.09, z: -103.56}
+  m_LocalPosition: {x: 72.96, y: 10.5, z: -88.43}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 26.06, y: -69.9, z: 1.835}
 --- !u!114 &617876447
 MonoBehaviour:
@@ -3329,7 +3689,7 @@ GameObject:
   - component: {fileID: 631642289}
   m_Layer: 0
   m_Name: tent_b (2)
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -3406,7 +3766,7 @@ GameObject:
   - component: {fileID: 650550987}
   m_Layer: 0
   m_Name: citadel_bridge (1)
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -3483,7 +3843,7 @@ GameObject:
   - component: {fileID: 658014375}
   m_Layer: 0
   m_Name: citadel_bridge (2)
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -3576,7 +3936,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400050, guid: e42d9259129992a4d95e0b320ca2a43d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -102.84
+      value: -86.13
       objectReference: {fileID: 0}
     - target: {fileID: 400050, guid: e42d9259129992a4d95e0b320ca2a43d, type: 3}
       propertyPath: m_LocalRotation.x
@@ -3666,6 +4026,22 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100050, guid: e42d9259129992a4d95e0b320ca2a43d, type: 3}
+      propertyPath: m_Name
+      value: Player1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400210, guid: e42d9259129992a4d95e0b320ca2a43d, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400206, guid: e42d9259129992a4d95e0b320ca2a43d, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100026, guid: e42d9259129992a4d95e0b320ca2a43d, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e42d9259129992a4d95e0b320ca2a43d, type: 3}
   m_IsPrefabParent: 0
@@ -3753,7 +4129,7 @@ GameObject:
   - component: {fileID: 694735524}
   m_Layer: 0
   m_Name: castle_wall_corner_b
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -3843,7 +4219,7 @@ GameObject:
   - component: {fileID: 697016846}
   m_Layer: 0
   m_Name: castle_wall_15m
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -3933,7 +4309,7 @@ GameObject:
   - component: {fileID: 704820947}
   m_Layer: 0
   m_Name: wall_H10m_L50m
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -4023,7 +4399,7 @@ GameObject:
   - component: {fileID: 729090608}
   m_Layer: 0
   m_Name: citadel_tower_a (1)
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -4262,101 +4638,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 748412530}
   m_Mesh: {fileID: 4300000, guid: 1a91fefe32e1b3442a68f5dc4467843b, type: 3}
---- !u!1 &754061423
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 754061427}
-  - component: {fileID: 754061426}
-  - component: {fileID: 754061425}
-  - component: {fileID: 754061424}
-  - component: {fileID: 754061428}
-  m_Layer: 0
-  m_Name: Main Camera
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!81 &754061424
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 754061423}
-  m_Enabled: 0
---- !u!124 &754061425
-Behaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 754061423}
-  m_Enabled: 1
---- !u!20 &754061426
-Camera:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 754061423}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
-  orthographic: 1
-  orthographic size: 13.7
-  m_Depth: -1
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
-  m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: 0.022
---- !u!4 &754061427
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 754061423}
-  m_LocalRotation: {x: -0.24182148, y: -0, z: -0, w: -0.9703208}
-  m_LocalPosition: {x: 1, y: 15, z: -24}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -332.012, y: 0, z: 0}
---- !u!114 &754061428
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 754061423}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 204e33c813c3243c895d1695e69cd267, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 1660863801}
-  smoothing: 5
 --- !u!1 &773132026
 GameObject:
   m_ObjectHideFlags: 0
@@ -4445,7 +4726,7 @@ GameObject:
   - component: {fileID: 775767209}
   m_Layer: 0
   m_Name: castle_wall_15m
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -4635,7 +4916,7 @@ GameObject:
   - component: {fileID: 799519524}
   m_Layer: 0
   m_Name: walls_segment_11
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4670,7 +4951,7 @@ GameObject:
   - component: {fileID: 818884444}
   m_Layer: 0
   m_Name: tent_c (9)
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -4896,7 +5177,7 @@ GameObject:
   - component: {fileID: 824369863}
   m_Layer: 0
   m_Name: castle_wall_2,5m (1)
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -5046,7 +5327,7 @@ GameObject:
   - component: {fileID: 885037910}
   m_Layer: 0
   m_Name: Vegetation
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5100,7 +5381,7 @@ GameObject:
   - component: {fileID: 887826806}
   m_Layer: 0
   m_Name: castle_wall_15m (2)
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -5176,7 +5457,7 @@ GameObject:
   - component: {fileID: 895468675}
   m_Layer: 0
   m_Name: tent_a (3)
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -5254,7 +5535,7 @@ GameObject:
   - component: {fileID: 901791725}
   m_Layer: 0
   m_Name: castle_wall_corner_b
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -5463,7 +5744,7 @@ GameObject:
   - component: {fileID: 910483817}
   m_Layer: 0
   m_Name: tent_c (11)
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -5526,6 +5807,124 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 910483815}
   m_Mesh: {fileID: 4300000, guid: da3ee31277576ae49a6692778aa8e876, type: 3}
+--- !u!1001 &933197816
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400050, guid: e42d9259129992a4d95e0b320ca2a43d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 63.81
+      objectReference: {fileID: 0}
+    - target: {fileID: 400050, guid: e42d9259129992a4d95e0b320ca2a43d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 400050, guid: e42d9259129992a4d95e0b320ca2a43d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -82.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 400050, guid: e42d9259129992a4d95e0b320ca2a43d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400050, guid: e42d9259129992a4d95e0b320ca2a43d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400050, guid: e42d9259129992a4d95e0b320ca2a43d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400050, guid: e42d9259129992a4d95e0b320ca2a43d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400050, guid: e42d9259129992a4d95e0b320ca2a43d, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: e42d9259129992a4d95e0b320ca2a43d, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 81e592ecfb1d7c4449fc23f0846ce67b, type: 2}
+    - target: {fileID: 100050, guid: e42d9259129992a4d95e0b320ca2a43d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100050, guid: e42d9259129992a4d95e0b320ca2a43d, type: 3}
+      propertyPath: m_TagString
+      value: Player2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400204, guid: e42d9259129992a4d95e0b320ca2a43d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.00000065565104
+      objectReference: {fileID: 0}
+    - target: {fileID: 400204, guid: e42d9259129992a4d95e0b320ca2a43d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.000000059604638
+      objectReference: {fileID: 0}
+    - target: {fileID: 400204, guid: e42d9259129992a4d95e0b320ca2a43d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.032254037
+      objectReference: {fileID: 0}
+    - target: {fileID: 400204, guid: e42d9259129992a4d95e0b320ca2a43d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9994798
+      objectReference: {fileID: 0}
+    - target: {fileID: 400204, guid: e42d9259129992a4d95e0b320ca2a43d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.2527174
+      objectReference: {fileID: 0}
+    - target: {fileID: 400204, guid: e42d9259129992a4d95e0b320ca2a43d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.00015711783
+      objectReference: {fileID: 0}
+    - target: {fileID: 400204, guid: e42d9259129992a4d95e0b320ca2a43d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.000006638468
+      objectReference: {fileID: 0}
+    - target: {fileID: 400206, guid: e42d9259129992a4d95e0b320ca2a43d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.50000006
+      objectReference: {fileID: 0}
+    - target: {fileID: 400206, guid: e42d9259129992a4d95e0b320ca2a43d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400206, guid: e42d9259129992a4d95e0b320ca2a43d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400206, guid: e42d9259129992a4d95e0b320ca2a43d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400206, guid: e42d9259129992a4d95e0b320ca2a43d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400206, guid: e42d9259129992a4d95e0b320ca2a43d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0017318726
+      objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: e42d9259129992a4d95e0b320ca2a43d, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100050, guid: e42d9259129992a4d95e0b320ca2a43d, type: 3}
+      propertyPath: m_Name
+      value: Player 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100026, guid: e42d9259129992a4d95e0b320ca2a43d, type: 3}
+      propertyPath: m_TagString
+      value: Player2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: e42d9259129992a4d95e0b320ca2a43d, type: 3}
+  m_IsPrefabParent: 0
 --- !u!1 &942127348
 GameObject:
   m_ObjectHideFlags: 0
@@ -5539,7 +5938,7 @@ GameObject:
   - component: {fileID: 942127350}
   m_Layer: 0
   m_Name: tent_b (3)
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -5603,6 +6002,72 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 942127348}
   m_Mesh: {fileID: 4300000, guid: f54bdb463f46eee4bb8cb513069cd0f5, type: 3}
+--- !u!1001 &949068863
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 539998083}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 31361caab115d4ad496e133f08528f34, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.15370822
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 31361caab115d4ad496e133f08528f34, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.1050172
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 31361caab115d4ad496e133f08528f34, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.00007650997
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 31361caab115d4ad496e133f08528f34, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 31361caab115d4ad496e133f08528f34, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 31361caab115d4ad496e133f08528f34, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 31361caab115d4ad496e133f08528f34, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 31361caab115d4ad496e133f08528f34, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 31361caab115d4ad496e133f08528f34, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 31361caab115d4ad496e133f08528f34, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 31361caab115d4ad496e133f08528f34, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 31361caab115d4ad496e133f08528f34, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 31361caab115d4ad496e133f08528f34, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 31361caab115d4ad496e133f08528f34, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 31361caab115d4ad496e133f08528f34, type: 3}
+  m_IsPrefabParent: 0
 --- !u!1 &950031758
 GameObject:
   m_ObjectHideFlags: 0
@@ -5617,7 +6082,7 @@ GameObject:
   - component: {fileID: 950031760}
   m_Layer: 0
   m_Name: citadel_tower_b
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -5697,6 +6162,10 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 950031758}
   m_Mesh: {fileID: 4300000, guid: fd526b87fb5327147ad3b26bb04ec63b, type: 3}
+--- !u!4 &957097592 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400024, guid: e42d9259129992a4d95e0b320ca2a43d, type: 3}
+  m_PrefabInternal: {fileID: 933197816}
 --- !u!1 &957820549
 GameObject:
   m_ObjectHideFlags: 0
@@ -5711,7 +6180,7 @@ GameObject:
   - component: {fileID: 957820551}
   m_Layer: 0
   m_Name: castle_wall_5m_h21m
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -5800,7 +6269,7 @@ GameObject:
   - component: {fileID: 983478658}
   m_Layer: 0
   m_Name: tent_c (6)
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -5951,7 +6420,7 @@ GameObject:
   - component: {fileID: 1007801578}
   m_Layer: 0
   m_Name: castle_wall_2,5m
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -6014,6 +6483,125 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1007801576}
   m_Mesh: {fileID: 4300000, guid: b2127b9d6c51ab04bbc99c49ad0bb883, type: 3}
+--- !u!1 &1009330078
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1009330079}
+  m_Layer: 5
+  m_Name: HealthUI 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1009330079
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1009330078}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 424872940}
+  - {fileID: 1020430200}
+  m_Father: {fileID: 134341697}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -200, y: 30}
+  m_SizeDelta: {x: 75, y: 60}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1020430199
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1020430200}
+  - component: {fileID: 1020430201}
+  m_Layer: 5
+  m_Name: Slider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1020430200
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1020430199}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1917329165}
+  - {fileID: 1428031536}
+  m_Father: {fileID: 1009330079}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 95, y: 0}
+  m_SizeDelta: {x: 160, y: 20}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1020430201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1020430199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -113659843, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 0
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 0}
+  m_FillRect: {fileID: 1855551418}
+  m_HandleRect: {fileID: 0}
+  m_Direction: 0
+  m_MinValue: 0
+  m_MaxValue: 100
+  m_WholeNumbers: 0
+  m_Value: 100
+  m_OnValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1026644833
 GameObject:
   m_ObjectHideFlags: 0
@@ -6136,7 +6724,7 @@ GameObject:
   - component: {fileID: 1032877817}
   m_Layer: 0
   m_Name: tent_c (1)
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -6199,6 +6787,22 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1032877815}
   m_Mesh: {fileID: 4300000, guid: da3ee31277576ae49a6692778aa8e876, type: 3}
+--- !u!1 &1034080854 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: b3aa3ed615bc440f5a852d3542769edc, type: 3}
+  m_PrefabInternal: {fileID: 252558440}
+--- !u!65 &1034080857
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1034080854}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.13, y: 0.18, z: 0.01}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1066095556
 GameObject:
   m_ObjectHideFlags: 0
@@ -6322,7 +6926,7 @@ GameObject:
   - component: {fileID: 1091863912}
   m_Layer: 0
   m_Name: tent_a
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -6476,7 +7080,7 @@ GameObject:
   - component: {fileID: 1110669130}
   m_Layer: 0
   m_Name: castle_wall_15m (1)
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -6553,7 +7157,7 @@ GameObject:
   - component: {fileID: 1144829713}
   m_Layer: 0
   m_Name: citadel_wall_a (1)
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -6642,7 +7246,7 @@ GameObject:
   - component: {fileID: 1152650730}
   m_Layer: 0
   m_Name: tent_c (8)
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -6828,7 +7432,7 @@ GameObject:
   - component: {fileID: 1203873688}
   m_Layer: 0
   m_Name: castle_wall_incline_uper
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -6922,7 +7526,7 @@ GameObject:
   - component: {fileID: 1239169769}
   m_Layer: 0
   m_Name: castle_tower_rectangular
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -7074,7 +7678,7 @@ GameObject:
   - component: {fileID: 1244622157}
   m_Layer: 0
   m_Name: banner (2)
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -7229,7 +7833,7 @@ GameObject:
   - component: {fileID: 1269051128}
   m_Layer: 0
   m_Name: banner
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -7305,7 +7909,7 @@ GameObject:
   - component: {fileID: 1274366420}
   m_Layer: 0
   m_Name: citadel_gate
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -7384,7 +7988,7 @@ GameObject:
   - component: {fileID: 1279983852}
   m_Layer: 0
   m_Name: banner (1)
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -7465,8 +8069,12 @@ MonoBehaviour:
   Arco: {fileID: 100050, guid: e9ebfd61d4a1b494faf4927176030477, type: 3}
   Espada: {fileID: 100050, guid: 4d3ff1b31cb814e4aae6266213c9574c, type: 3}
   Escudo: {fileID: 100050, guid: 7c31266611d776b468d8b445f18a91f9, type: 3}
+  camara: {fileID: 617876445}
+  isArco: 1
+  tieneEscudo: 0
   velocidad: 6
   timeBetweenBullets: 0.15
+  escudoCD: 0.5
   bulletPrefab: {fileID: 1000010480416858, guid: 07b4e1645f441dc47afc0a1dc1b29bb7,
     type: 2}
   bulletSpawn: {fileID: 1476192300}
@@ -7485,6 +8093,7 @@ MonoBehaviour:
   currentHealth: 0
   healthSlider: {fileID: 730234303}
   damageImage: {fileID: 1380298806}
+  invulnerable: 0
   flashSpeed: 5
   flashColour: {r: 1, g: 0, b: 0, a: 0.1}
   anima: {fileID: 1286831802}
@@ -7518,7 +8127,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 2.82, z: 1}
+  m_Size: {x: 0.61, y: 2.82, z: 0.45}
   m_Center: {x: 0, y: 1.41, z: 0}
 --- !u!54 &1286831805
 Rigidbody:
@@ -7543,13 +8152,13 @@ NavMeshAgent:
   m_GameObject: {fileID: 1286831798}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 0.4
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
+  m_AutoTraverseOffMeshLink: 0
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 2
@@ -7643,7 +8252,7 @@ GameObject:
   - component: {fileID: 1300303948}
   m_Layer: 0
   m_Name: citadel_gate
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7826,7 +8435,7 @@ GameObject:
   - component: {fileID: 1338706582}
   m_Layer: 0
   m_Name: castle_tower_round
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -7900,7 +8509,7 @@ GameObject:
   - component: {fileID: 1340962440}
   m_Layer: 0
   m_Name: walls_segment_10
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8449,6 +9058,40 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1421714190}
+--- !u!1 &1428031535
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1428031536}
+  m_Layer: 5
+  m_Name: Fill Area
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1428031536
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1428031535}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1855551418}
+  m_Father: {fileID: 1020430200}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.25}
+  m_AnchorMax: {x: 1, y: 0.75}
+  m_AnchoredPosition: {x: -5, y: 0}
+  m_SizeDelta: {x: -20, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1441436608
 GameObject:
   m_ObjectHideFlags: 0
@@ -8462,7 +9105,7 @@ GameObject:
   - component: {fileID: 1441436610}
   m_Layer: 0
   m_Name: tent_c (7)
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -8538,7 +9181,7 @@ GameObject:
   - component: {fileID: 1445836958}
   m_Layer: 0
   m_Name: citadel_tower_d
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -8638,7 +9281,7 @@ GameObject:
   - component: {fileID: 1459396594}
   m_Layer: 0
   m_Name: Terrain
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8730,7 +9373,7 @@ GameObject:
   - component: {fileID: 1478843528}
   m_Layer: 0
   m_Name: citadel_wall_incline
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -8830,7 +9473,7 @@ GameObject:
   - component: {fileID: 1497886140}
   m_Layer: 0
   m_Name: castle_wall_5m_h21m (1)
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -8919,7 +9562,7 @@ GameObject:
   - component: {fileID: 1500848373}
   m_Layer: 0
   m_Name: tent_c (2)
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -9055,7 +9698,7 @@ GameObject:
   - component: {fileID: 1523229075}
   m_Layer: 0
   m_Name: walls_segment_09
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9090,7 +9733,7 @@ GameObject:
   - component: {fileID: 1523717685}
   m_Layer: 0
   m_Name: castle_wall_corner_a
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -9153,6 +9796,101 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1523717683}
   m_Mesh: {fileID: 4300000, guid: db20f96f575428e41b67d94a2a1c0fd8, type: 3}
+--- !u!1 &1529181577
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1529181582}
+  - component: {fileID: 1529181581}
+  - component: {fileID: 1529181580}
+  - component: {fileID: 1529181579}
+  - component: {fileID: 1529181578}
+  m_Layer: 0
+  m_Name: Camera2
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1529181578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1529181577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 204e33c813c3243c895d1695e69cd267, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 43683184}
+  smoothing: 5
+--- !u!81 &1529181579
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1529181577}
+  m_Enabled: 1
+--- !u!124 &1529181580
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1529181577}
+  m_Enabled: 1
+--- !u!20 &1529181581
+Camera:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1529181577}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0.5
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 100
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &1529181582
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1529181577}
+  m_LocalRotation: {x: 0.17583925, y: -0.560999, z: 0.14192836, w: 0.7963774}
+  m_LocalPosition: {x: 72.96, y: 10.5, z: -84.11}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 26.06, y: -69.9, z: 1.835}
 --- !u!1 &1544333560
 GameObject:
   m_ObjectHideFlags: 0
@@ -9167,7 +9905,7 @@ GameObject:
   - component: {fileID: 1544333562}
   m_Layer: 0
   m_Name: citadel_tower_e
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -9243,6 +9981,34 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1544333560}
   m_Mesh: {fileID: 4300000, guid: 4a208b341e831064f9aee574e92ea563, type: 3}
+--- !u!1 &1549314832
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1549314833}
+  m_Layer: 0
+  m_Name: Disparo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1549314833
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1549314832}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 1.75, z: 1.22}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 43683184}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &1560406762
 GameObject:
   m_ObjectHideFlags: 0
@@ -9257,7 +10023,7 @@ GameObject:
   - component: {fileID: 1560406764}
   m_Layer: 0
   m_Name: citadel_tower_corner
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -9349,7 +10115,7 @@ GameObject:
   - component: {fileID: 1576872346}
   m_Layer: 0
   m_Name: tent_a (4)
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -9428,7 +10194,7 @@ GameObject:
   - component: {fileID: 1577226081}
   m_Layer: 0
   m_Name: castle_wall_corner_a (1)
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -9799,7 +10565,7 @@ GameObject:
   - component: {fileID: 1608203809}
   m_Layer: 0
   m_Name: walls_segment_12
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9900,6 +10666,35 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1622028046}
   m_Mesh: {fileID: 4300000, guid: 58379ff237ae7ef4082fb2cc1cb3b1b6, type: 3}
+--- !u!1 &1633066192 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: f8fae8a9e002e4c4fbbea75b09a21fbb, type: 3}
+  m_PrefabInternal: {fileID: 259199564}
+--- !u!136 &1633066195
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1633066192}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.01
+  m_Height: 0.38
+  m_Direction: 1
+  m_Center: {x: 0, y: -0.08, z: 0}
+--- !u!114 &1633066196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1633066192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21614cc7040a046d499201cc10c35eaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDamage: 15
 --- !u!1 &1635894094
 GameObject:
   m_ObjectHideFlags: 0
@@ -9913,7 +10708,7 @@ GameObject:
   - component: {fileID: 1635894096}
   m_Layer: 0
   m_Name: tent_c (10)
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -10062,8 +10857,12 @@ MonoBehaviour:
   Arco: {fileID: 1208506079}
   Espada: {fileID: 1412001674}
   Escudo: {fileID: 684214922}
+  camara: {fileID: 0}
+  isArco: 0
+  tieneEscudo: 0
   velocidad: 15
   timeBetweenBullets: 1
+  escudoCD: 0.5
   bulletPrefab: {fileID: 1000010480416858, guid: 07b4e1645f441dc47afc0a1dc1b29bb7,
     type: 2}
   bulletSpawn: {fileID: 1883540576}
@@ -10114,6 +10913,7 @@ MonoBehaviour:
   currentHealth: 0
   healthSlider: {fileID: 730234303}
   damageImage: {fileID: 1380298806}
+  invulnerable: 0
   flashSpeed: 5
   flashColour: {r: 1, g: 0, b: 0, a: 0.1}
   anima: {fileID: 0}
@@ -10131,7 +10931,7 @@ GameObject:
   - component: {fileID: 1667183690}
   m_Layer: 0
   m_Name: castle_wall_10m
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -10221,7 +11021,7 @@ GameObject:
   - component: {fileID: 1669807721}
   m_Layer: 0
   m_Name: citadel_tower_f
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -10379,7 +11179,7 @@ GameObject:
   - component: {fileID: 1675943135}
   m_Layer: 0
   m_Name: tent_b
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -10555,7 +11355,7 @@ GameObject:
   - component: {fileID: 1723505364}
   m_Layer: 0
   m_Name: citadel_bridge
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -10644,7 +11444,7 @@ GameObject:
   - component: {fileID: 1734030396}
   m_Layer: 0
   m_Name: tent_c (16)
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -10871,7 +11671,7 @@ GameObject:
   - component: {fileID: 1752322486}
   m_Layer: 0
   m_Name: castle_wall_2,5m (2)
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -11023,7 +11823,7 @@ GameObject:
   - component: {fileID: 1787284720}
   m_Layer: 0
   m_Name: castle_wall_15m (1)
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -11113,7 +11913,7 @@ GameObject:
   - component: {fileID: 1795833808}
   m_Layer: 0
   m_Name: citadel_tower_a
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -11282,7 +12082,7 @@ GameObject:
   - component: {fileID: 1834167170}
   m_Layer: 0
   m_Name: tent_c (12)
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -11358,7 +12158,7 @@ GameObject:
   - component: {fileID: 1855368024}
   m_Layer: 0
   m_Name: tent_b (1)
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -11422,6 +12222,74 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1855368022}
   m_Mesh: {fileID: 4300000, guid: f54bdb463f46eee4bb8cb513069cd0f5, type: 3}
+--- !u!1 &1855551417
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1855551418}
+  - component: {fileID: 1855551420}
+  - component: {fileID: 1855551419}
+  m_Layer: 5
+  m_Name: Fill
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1855551418
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1855551417}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1428031536}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 10, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1855551419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1855551417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &1855551420
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1855551417}
 --- !u!1 &1868704082
 GameObject:
   m_ObjectHideFlags: 0
@@ -11435,7 +12303,7 @@ GameObject:
   - component: {fileID: 1868704084}
   m_Layer: 0
   m_Name: castle_wall_corner_a
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -11511,7 +12379,7 @@ GameObject:
   - component: {fileID: 1876922827}
   m_Layer: 0
   m_Name: citadel_tower_c
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -11680,6 +12548,74 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1901414545}
   m_Mesh: {fileID: 4300000, guid: 9c08cd06ebe043149808bf61825a0f6b, type: 3}
+--- !u!1 &1917329164
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1917329165}
+  - component: {fileID: 1917329167}
+  - component: {fileID: 1917329166}
+  m_Layer: 5
+  m_Name: Background
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1917329165
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1917329164}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1020430200}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.25}
+  m_AnchorMax: {x: 1, y: 0.75}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1917329166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1917329164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &1917329167
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1917329164}
 --- !u!1 &1935862902
 GameObject:
   m_ObjectHideFlags: 0
@@ -11693,7 +12629,7 @@ GameObject:
   - component: {fileID: 1935862904}
   m_Layer: 0
   m_Name: tent_c (5)
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -11769,7 +12705,7 @@ GameObject:
   - component: {fileID: 1935970009}
   m_Layer: 0
   m_Name: tent_c (14)
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -11995,9 +12931,9 @@ GameObject:
   - component: {fileID: 1947837098}
   - component: {fileID: 1947837100}
   - component: {fileID: 1947837099}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: citadel_base_a
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -12267,7 +13203,7 @@ GameObject:
   - component: {fileID: 2015704909}
   m_Layer: 0
   m_Name: tent_c (13)
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -12419,7 +13355,7 @@ GameObject:
   - component: {fileID: 2055098404}
   m_Layer: 0
   m_Name: wall_H10m_L50m
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -12571,7 +13507,7 @@ GameObject:
   - component: {fileID: 2088071101}
   m_Layer: 0
   m_Name: castle_tower_rectangular
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -12858,7 +13794,7 @@ GameObject:
   - component: {fileID: 2125969807}
   m_Layer: 0
   m_Name: citadel_wall_b
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -13011,7 +13947,7 @@ GameObject:
   - component: {fileID: 2144480791}
   m_Layer: 0
   m_Name: citadel_wall_b
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
