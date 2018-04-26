@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 // public enum Weapon{
 // 	UNARMED = 0,
@@ -24,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
     public GameObject right;
     public GameObject left;
     public Camera camara;
+    public  GameObject otroJugador;
   public bool isArco;
   public bool tieneEscudo;
 
@@ -41,6 +43,7 @@ public class PlayerMovement : MonoBehaviour
   Rigidbody jugadorRB;
   int Piso;
   float camRayLargo = 100f;
+  PlayerHealth photro;
 
 
   void Mover(float h, float v){
@@ -80,6 +83,7 @@ void Awake(){
   anima = GetComponent<Animator>();
   //anim = GetComponent<Animator>();
   jugadorRB = GetComponent<Rigidbody>();
+  photro = otroJugador.GetComponent<PlayerHealth>();
 }
 
   void FixedUpdate(){
@@ -92,14 +96,18 @@ void Awake(){
   void Update(){
     timer += Time.deltaTime;
     timer2 += Time.deltaTime;
-    if(Input.GetButton ("Fire1") && timer >= timeBetweenBullets && Time.timeScale != 0 && isArco)
+    if(Input.GetButtonDown ("Fire1") && timer >= timeBetweenBullets && Time.timeScale != 0 && isArco)
     {
       anima.SetTrigger("Bow");
-    }else if (Input.GetButton ("Fire1") && !isArco) {
+    }else if (Input.GetButtonDown ("Fire1") && !isArco) {
       anima.SetTrigger("Mouse");
-    }else if (Input.GetButton ("Shield") && !isArco && timer2 >= escudoCD){
+      float dist = Vector3.Distance(otroJugador.transform.position, transform.position);
+      if (dist < 5) {
+        photro.TakeDamage (5);
+      }
+    }else if (Input.GetButtonDown ("Shield") && !isArco && timer2 >= escudoCD){
       anima.SetTrigger("Block");
-      ph.invulnerable = true;
+      StartCoroutine(Shield());
     }else if (Input.GetButtonDown("Switch")){
       isArco = !isArco;
             if (!isArco)
@@ -144,5 +152,15 @@ void Awake(){
 
   public void FootL(){
   }
+
+  IEnumerator Shield()
+    {
+      Debug.Log("invulnerable");
+        ph.invulnerable = true;
+        yield return new WaitForSeconds(1.5f);
+        ph.invulnerable = false;
+        Debug.Log("vulnerable");
+
+    }
 
 }

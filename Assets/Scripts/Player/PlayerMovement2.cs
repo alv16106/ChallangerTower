@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 // public enum Weapon{
 // 	UNARMED = 0,
@@ -31,6 +32,7 @@ public class PlayerMovement2 : MonoBehaviour
     public float timeBetweenBullets = 0.15f;
     public float escudoCD = 0.5f;
     public GameObject bulletPrefab;
+    public  GameObject otroJugador;
     public Transform bulletSpawn;
 
     PlayerHealth ph;
@@ -41,6 +43,7 @@ public class PlayerMovement2 : MonoBehaviour
     Rigidbody jugadorRB;
     int Piso;
     float camRayLargo = 100f;
+    PlayerHealth photro;
 
 
     void Mover(float h, float v)
@@ -86,6 +89,8 @@ public class PlayerMovement2 : MonoBehaviour
         anima = GetComponent<Animator>();
         //anim = GetComponent<Animator>();
         jugadorRB = GetComponent<Rigidbody>();
+        photro = otroJugador.GetComponent<PlayerHealth>();
+
     }
 
     void FixedUpdate()
@@ -100,20 +105,24 @@ public class PlayerMovement2 : MonoBehaviour
     {
         timer += Time.deltaTime;
         timer2 += Time.deltaTime;
-        if (Input.GetButton("Fire1C") && timer >= timeBetweenBullets && Time.timeScale != 0 && isArco)
+        if (Input.GetButtonDown("Fire1C") && timer >= timeBetweenBullets && Time.timeScale != 0 && isArco)
         {
             anima.SetTrigger("Bow");
         }
-        else if (Input.GetButton("Fire1C") && !isArco)
+        else if (Input.GetButtonDown("Fire1C") && !isArco)
         {
-            anima.SetTrigger("Mouse");
+          anima.SetTrigger("Mouse");
+          float dist = Vector3.Distance(otroJugador.transform.position, transform.position);
+          if (dist < 5) {
+            photro.TakeDamage (5);
+          }
         }
-        else if (Input.GetButton("ShieldC") && !isArco && timer2 >= escudoCD)
+        else if (Input.GetButtonDown("ShieldC") && !isArco && timer2 >= escudoCD)
         {
             anima.SetTrigger("Block");
-            ph.invulnerable = true;
+            StartCoroutine(Shield());
         }
-        else if (Input.GetButton("Change"))
+        else if (Input.GetButtonDown("Change"))
         {
             isArco = !isArco;
             if (!isArco)
@@ -163,5 +172,14 @@ public class PlayerMovement2 : MonoBehaviour
     public void FootL()
     {
     }
+
+    IEnumerator Shield()
+      {
+          ph.invulnerable = true;
+          anima.SetTrigger("Block");
+          yield return new WaitForSeconds(1.5f);
+          ph.invulnerable = false;
+
+      }
 
 }

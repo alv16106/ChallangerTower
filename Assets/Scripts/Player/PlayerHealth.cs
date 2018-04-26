@@ -55,15 +55,13 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage (int amount)
     {
-      if (invulnerable) {
-        return;
-      }
+      if (!invulnerable) {
         damaged = true;
 
         currentHealth -= amount;
 
         healthSlider.value = currentHealth;
-
+      }
         //playerAudio.Play ();
 
         if(currentHealth <= 0 && !isDead)

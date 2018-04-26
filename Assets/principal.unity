@@ -319,32 +319,6 @@ MonoBehaviour:
   flashSpeed: 5
   flashColour: {r: 1, g: 0, b: 0, a: 0.1}
   anima: {fileID: 43683183}
---- !u!114 &43683180
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 43683176}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ec45203ae7a1a54c9d02c355f983833, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Arco: {fileID: 100050, guid: e9ebfd61d4a1b494faf4927176030477, type: 3}
-  Espada: {fileID: 100050, guid: 4d3ff1b31cb814e4aae6266213c9574c, type: 3}
-  Escudo: {fileID: 100050, guid: 7c31266611d776b468d8b445f18a91f9, type: 3}
-  pelvis: {fileID: 2079593785}
-  right: {fileID: 1388279124}
-  left: {fileID: 919557010}
-  camara: {fileID: 1529181581}
-  isArco: 0
-  tieneEscudo: 0
-  velocidad: 6
-  timeBetweenBullets: 0.15
-  escudoCD: 0.5
-  bulletPrefab: {fileID: 1000010480416858, guid: 07b4e1645f441dc47afc0a1dc1b29bb7,
-    type: 2}
-  bulletSpawn: {fileID: 1549314833}
 --- !u!65 &43683181
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -417,6 +391,7 @@ MonoBehaviour:
   escudoCD: 0.5
   bulletPrefab: {fileID: 1000010480416858, guid: 07b4e1645f441dc47afc0a1dc1b29bb7,
     type: 2}
+  otroJugador: {fileID: 43683176}
   bulletSpawn: {fileID: 1476192300}
 --- !u!1 &52402011
 GameObject:
@@ -8157,6 +8132,7 @@ MonoBehaviour:
   right: {fileID: 707949242}
   left: {fileID: 2089135717}
   camara: {fileID: 617876445}
+  otroJugador: {fileID: 43683176}
   isArco: 1
   tieneEscudo: 0
   velocidad: 6
@@ -10952,6 +10928,7 @@ MonoBehaviour:
   right: {fileID: 0}
   left: {fileID: 0}
   camara: {fileID: 0}
+  otroJugador: {fileID: 0}
   isArco: 0
   tieneEscudo: 0
   velocidad: 15
