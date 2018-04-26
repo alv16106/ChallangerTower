@@ -334,6 +334,9 @@ MonoBehaviour:
   Arco: {fileID: 100050, guid: e9ebfd61d4a1b494faf4927176030477, type: 3}
   Espada: {fileID: 100050, guid: 4d3ff1b31cb814e4aae6266213c9574c, type: 3}
   Escudo: {fileID: 100050, guid: 7c31266611d776b468d8b445f18a91f9, type: 3}
+  pelvis: {fileID: 0}
+  right: {fileID: 0}
+  left: {fileID: 0}
   camara: {fileID: 1529181581}
   isArco: 0
   tieneEscudo: 0
@@ -401,9 +404,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51b0c2b1b2e881c408519d065004e3c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Arco: {fileID: 100050, guid: e9ebfd61d4a1b494faf4927176030477, type: 3}
-  Espada: {fileID: 100050, guid: 4d3ff1b31cb814e4aae6266213c9574c, type: 3}
-  Escudo: {fileID: 100050, guid: 7c31266611d776b468d8b445f18a91f9, type: 3}
+  Arco: {fileID: 446109676}
+  Espada: {fileID: 414756936}
+  Escudo: {fileID: 1034080854}
   pelvis: {fileID: 2079593785}
   right: {fileID: 1388279124}
   left: {fileID: 919557010}
@@ -1143,6 +1146,10 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 176864425}
   m_Mesh: {fileID: 4300000, guid: 80c58763d3b065b48924f320debf9ccc, type: 3}
+--- !u!1 &208503785 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100026, guid: e42d9259129992a4d95e0b320ca2a43d, type: 3}
+  m_PrefabInternal: {fileID: 670687544}
 --- !u!1 &209967981
 GameObject:
   m_ObjectHideFlags: 0
@@ -3012,6 +3019,14 @@ Transform:
   m_Father: {fileID: 1199103935}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &442106825 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: 31361caab115d4ad496e133f08528f34, type: 3}
+  m_PrefabInternal: {fileID: 903145584}
+--- !u!1 &446109676 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: 31361caab115d4ad496e133f08528f34, type: 3}
+  m_PrefabInternal: {fileID: 949068863}
 --- !u!1 &459408669
 GameObject:
   m_ObjectHideFlags: 0
@@ -4423,6 +4438,10 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 704820945}
   m_Mesh: {fileID: 4300000, guid: fe9112a7924632640b49516b821f59a3, type: 3}
+--- !u!1 &707949242 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100032, guid: e42d9259129992a4d95e0b320ca2a43d, type: 3}
+  m_PrefabInternal: {fileID: 670687544}
 --- !u!1 &729090606
 GameObject:
   m_ObjectHideFlags: 0
@@ -8108,9 +8127,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ec45203ae7a1a54c9d02c355f983833, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Arco: {fileID: 100050, guid: e9ebfd61d4a1b494faf4927176030477, type: 3}
-  Espada: {fileID: 100050, guid: 4d3ff1b31cb814e4aae6266213c9574c, type: 3}
-  Escudo: {fileID: 100050, guid: 7c31266611d776b468d8b445f18a91f9, type: 3}
+  Arco: {fileID: 442106825}
+  Espada: {fileID: 1633066192}
+  Escudo: {fileID: 100817271}
+  pelvis: {fileID: 208503785}
+  right: {fileID: 707949242}
+  left: {fileID: 2089135717}
   camara: {fileID: 617876445}
   isArco: 1
   tieneEscudo: 0
@@ -10903,6 +10925,9 @@ MonoBehaviour:
   Arco: {fileID: 1208506079}
   Espada: {fileID: 1412001674}
   Escudo: {fileID: 684214922}
+  pelvis: {fileID: 0}
+  right: {fileID: 0}
+  left: {fileID: 0}
   camara: {fileID: 0}
   isArco: 0
   tieneEscudo: 0
@@ -13634,6 +13659,10 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2088071099}
   m_Mesh: {fileID: 4300000, guid: c5d5cab5fabe2444796202d232b7c886, type: 3}
+--- !u!1 &2089135717 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100044, guid: e42d9259129992a4d95e0b320ca2a43d, type: 3}
+  m_PrefabInternal: {fileID: 670687544}
 --- !u!1001 &2105114411
 Prefab:
   m_ObjectHideFlags: 0
