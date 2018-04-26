@@ -68,7 +68,6 @@ public class PlayerMovement : MonoBehaviour
         bulletPrefab,
         bulletSpawn.position,
         bulletSpawn.rotation);
-        Debug.Log(bullet.transform.rotation);
     // Add velocity to the bullet
     bullet.GetComponent<Rigidbody>().velocity = -bullet.transform.right * 15;
     // Destroy the bullet after 2 seconds
@@ -97,29 +96,37 @@ void Awake(){
     {
       anima.SetTrigger("Bow");
     }else if (Input.GetButton ("Fire1") && !isArco) {
-      //anima.SetTrigger("Mouse");
+      anima.SetTrigger("Mouse");
     }else if (Input.GetButton ("Shield") && !isArco && timer2 >= escudoCD){
       anima.SetTrigger("Block");
       ph.invulnerable = true;
-    }else if (Input.GetMouseButtonDown(2)){
+    }else if (Input.GetButtonDown("Switch")){
       isArco = !isArco;
             if (!isArco)
             {
-                Arco.transform.parent = pelvis.transform.parent;
-                Arco.transform.position = new Vector3(pelvis.transform.position.x - (float)0.1, pelvis.transform.position.y + 1, pelvis.transform.position.z);
+                Arco.transform.parent = pelvis.transform;
+                Arco.transform.localPosition = new Vector3(-0.44f, -0.22f, 0f);
+                Arco.transform.localRotation = Quaternion.Euler(90, 90, 0);
+                //Poner espada en mano derecha
                 Espada.transform.parent = right.transform;
-                Espada.transform.position = new Vector3(right.transform.position.x, right.transform.position.y, right.transform.position.z);
+                Espada.transform.localPosition = new Vector3(-0.2f, 0f, 1.54f);
+                Espada.transform.localRotation = Quaternion.Euler(0, 90, 90);
+                //POner escudo en mano izquierda
                 Escudo.transform.parent = left.transform;
-                Escudo.transform.position = new Vector3(left.transform.position.x + (float)0.2, left.transform.position.y, left.transform.position.z);
+                Escudo.transform.localPosition = new Vector3(-0.26f, 0f, 0f);
+                Escudo.transform.localRotation = Quaternion.Euler(28, 243, 126);
             }
             if (isArco)
             {
                 Arco.transform.parent = left.transform.parent;
-                Arco.transform.position = left.transform.position;
+                Arco.transform.localPosition = new Vector3(-0.15f, 0.1f, 0f);
+                Arco.transform.localRotation = Quaternion.Euler(180, 0, 0);
                 Espada.transform.parent = pelvis.transform;
-                Espada.transform.position = new Vector3(pelvis.transform.position.x - .3f, pelvis.transform.position.y, pelvis.transform.position.z - .3f);
+                Espada.transform.localPosition = new Vector3(0.28f, -0.23f, 0f);
+                Espada.transform.localRotation = Quaternion.Euler(-90, 90, 180);
                 Escudo.transform.parent = pelvis.transform;
-                Escudo.transform.position = new Vector3(pelvis.transform.position.x - .3f, pelvis.transform.position.y + .5f, pelvis.transform.position.z - .3f);
+                Escudo.transform.localPosition = new Vector3(-0.45f, -0.3f, 0f);
+                Escudo.transform.localRotation = Quaternion.Euler(90, 270, 0);
             }
         }
   }
