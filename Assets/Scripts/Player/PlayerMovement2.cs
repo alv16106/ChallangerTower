@@ -52,19 +52,21 @@ public class PlayerMovement2 : MonoBehaviour
         movimiento = movimiento.normalized * Time.deltaTime * velocidad;
         //jugadorRB.MovePosition(transform.position + movimiento);
         jugadorRB.MovePosition(transform.position + (transform.forward * movimiento.z) + (transform.right * movimiento.x));
+
     }
 
     void Vuelta()
     {
-        var angH = Input.GetAxis("Rotatex");
-        var angW = Input.GetAxis("Rotatey");
+		
+        var angH = Input.GetAxisRaw("Rotatex");
+        var angW = Input.GetAxisRaw("Rotatey");
         if(angH!=0 && angW != 0)
         {
             var pls = new Vector3(angH, 0, angW);
             Quaternion rot = Quaternion.LookRotation(pls);
             jugadorRB.MoveRotation(rot);
         }
-
+		//transform.Rotate (0.0f, -Input.GetAxisRaw ("Rotatex"), 0.0f);
     }
 
     void Fire()

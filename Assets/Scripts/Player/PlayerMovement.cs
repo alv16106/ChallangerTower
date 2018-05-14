@@ -59,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
     if (Physics.Raycast(camRay, out floorhit, camRayLargo, Piso)) {
       Vector3 jugadorToMouse = floorhit.point - transform.position;
       jugadorToMouse.y = 0f;
-      Quaternion rot = Quaternion.LookRotation(jugadorToMouse);
+      Quaternion rot = Quaternion.LookRotation(jugadorToMouse*0.001f);
       jugadorRB.MoveRotation(rot);
     }
   }

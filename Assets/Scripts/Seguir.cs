@@ -21,5 +21,7 @@ public class Seguir : MonoBehaviour
 
         // Smoothly interpolate between the camera's current position and it's target position.
         transform.position = Vector3.Lerp (transform.position, targetCamPos, smoothing * Time.deltaTime);
+		transform.rotation = target.rotation;
+		transform.LookAt (target.transform);
     }
 }

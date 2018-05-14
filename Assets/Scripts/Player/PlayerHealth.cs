@@ -50,6 +50,11 @@ public class PlayerHealth : MonoBehaviour
         }
         damaged = false;
 
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            RestartLevel();
+        }
+
     }
 
 
